@@ -11,7 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'NightPulse Seattle | Student Grant Proposal',
+  title: 'NightPulse Seattle | Priyansh\'s Grant Proposal',
   description: 'A student-led, all-night music festival proposal focused on community wellness, high-energy music, and sustainability in Seattle.',
   keywords: ['music festival', 'Seattle', 'UW', 'mental health', 'sustainability', 'EDM', 'student proposal'],
 };
