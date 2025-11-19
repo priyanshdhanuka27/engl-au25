@@ -19,10 +19,14 @@
   
   .gradient-text {
     @apply bg-gradient-gold bg-clip-text text-transparent;
+    line-height: 1.2;
+    padding-bottom: 0.2em;
   }
   
   .gradient-text-purple {
     @apply bg-gradient-purple bg-clip-text text-transparent;
+    line-height: 1.2;
+    padding-bottom: 0.2em;
   }
   
   .glow-purple {
