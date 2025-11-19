@@ -2,12 +2,25 @@
 import React from 'react';
 import Link from 'next/link';
 import Card from '@/components/Card';
-import GradientButton from '@/components/GradientButton';
+import BackgroundCircles from '@/components/BackgroundCircles';
 
 export default function BlogPage() {
+  const featuredPost = {
+    id: 1,
+    title: 'Why High-Energy Music Festivals Matter for Student Mental Health',
+    excerpt: 'Research shows that EDM and high-BPM music provide measurable mental health benefits, from mood enhancement to stress relief. Discover why music festivals are more than just entertainment—they\'re a vital wellness resource for students.',
+    category: 'Mental Health',
+    date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
+    readTime: '5 min read',
+    icon: '💜',
+    link: '/blog/mental-health-benefits',
+  };
+
   return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-20 relative overflow-hidden">
+      <BackgroundCircles variant="gold" className="opacity-30" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center space-y-6 mb-16 animate-fade-in">
           <div className="inline-flex items-center space-x-2 glass-effect px-6 py-3 rounded-full border border-uw-gold/30">
@@ -16,71 +29,61 @@ export default function BlogPage() {
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold gradient-text">
-            Festival Blog
+            Festival Insights
           </h1>
 
           <p className="text-xl text-uw-gold-light/80 max-w-2xl mx-auto leading-relaxed">
-            Insights on music, mental health, and community building
+            Exploring the intersection of music, mental health, and community
           </p>
         </div>
 
         {/* Featured Post */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-uw-gold mb-6">Featured Post</h2>
-          
-          <Card className="animate-slide-up">
-            <div className="space-y-6">
-              {/* Post Header */}
-              <div className="flex items-start space-x-4">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-purple glow-purple flex items-center justify-center flex-shrink-0">
-                  <span className="text-3xl">💜</span>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-3 mb-2">
-                    <span className="px-3 py-1 rounded-full bg-uw-purple/30 text-uw-purple text-sm font-semibold border border-uw-purple">
-                      Mental Health
-                    </span>
-                    <span className="text-uw-gold/60 text-sm">
-                      Featured Article
-                    </span>
-                  </div>
-                  <h3 className="text-3xl font-bold text-uw-gold-light mb-3">
-                    Why High-Energy Music Festivals Matter for Student Mental Health
-                  </h3>
-                  <p className="text-uw-gold-light/80 text-lg leading-relaxed">
-                    Research shows that EDM and high-BPM music provide measurable mental health benefits, 
-                    from mood enhancement to stress relief. Discover why music festivals are more than 
-                    just entertainment—they're a vital wellness resource for students.
-                  </p>
+        <div className="mb-16">
+          <Card className="animate-slide-up overflow-hidden">
+            <div className="md:flex md:space-x-8">
+              {/* Icon Section */}
+              <div className="md:w-1/3 flex items-center justify-center p-8 bg-gradient-to-br from-uw-purple/20 to-transparent">
+                <div className="w-32 h-32 rounded-3xl bg-gradient-purple glow-purple flex items-center justify-center">
+                  <span className="text-6xl">{featuredPost.icon}</span>
                 </div>
               </div>
 
-              {/* Post Meta */}
-              <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                <div className="flex items-center space-x-4 text-uw-gold/60 text-sm">
-                  <span>By NightPulse Research Team</span>
-                  <span>•</span>
-                  <span>5 min read</span>
+              {/* Content Section */}
+              <div className="md:w-2/3 p-8 space-y-4">
+                <div className="flex items-center space-x-3">
+                  <span className="px-4 py-1.5 rounded-full bg-uw-purple/30 text-uw-purple text-sm font-semibold border border-uw-purple">
+                    Featured
+                  </span>
+                  <span className="px-4 py-1.5 rounded-full bg-white/5 text-uw-gold-light text-sm font-medium">
+                    {featuredPost.category}
+                  </span>
                 </div>
-                <GradientButton href="/blog/mental-health-benefits">
-                  Read More
-                </GradientButton>
+
+                <h2 className="text-3xl md:text-4xl font-bold text-uw-gold-light leading-tight">
+                  {featuredPost.title}
+                </h2>
+
+                <p className="text-uw-gold-light/80 text-lg leading-relaxed">
+                  {featuredPost.excerpt}
+                </p>
+
+                <div className="flex items-center justify-between pt-4">
+                  <div className="flex items-center space-x-4 text-uw-gold/60 text-sm">
+                    <span>{featuredPost.date}</span>
+                    <span>•</span>
+                    <span>{featuredPost.readTime}</span>
+                  </div>
+                  <Link 
+                    href={featuredPost.link}
+                    className="px-6 py-2.5 rounded-xl bg-gradient-gold text-uw-purple-dark font-semibold hover:scale-105 transition-transform duration-300 glow-gold"
+                  >
+                    Read Article
+                  </Link>
+                </div>
               </div>
             </div>
           </Card>
         </div>
-
-        {/* Coming Soon Notice */}
-        <Card className="text-center space-y-4 bg-white/5 border-2 border-dashed border-uw-gold/30" hover={false}>
-          <div className="text-5xl">✨</div>
-          <h3 className="text-2xl font-bold text-uw-gold-light">
-            More Posts Coming Soon
-          </h3>
-          <p className="text-uw-gold-light/70 max-w-md mx-auto">
-            We're working on more articles about festival culture, sustainability practices, 
-            and community impact. Check back after proposal approval!
-          </p>
-        </Card>
 
         {/* Back Link */}
         <div className="text-center mt-12">

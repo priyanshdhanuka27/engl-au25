@@ -46,57 +46,6 @@ export default function InfographicPage() {
           <Infographic />
         </div>
 
-        {/* Action Buttons */}
-        <Card className="space-y-6">
-          <h2 className="text-2xl font-bold text-center gradient-text">
-            Share This Data
-          </h2>
-
-          {/* Download Button */}
-          <div className="text-center">
-            <GradientButton onClick={handleDownload}>
-              📥 Download as PDF
-            </GradientButton>
-          </div>
-
-          {/* Share Buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <button
-              onClick={() => handleShare('Twitter')}
-              className="px-6 py-3 rounded-xl glass-effect hover:bg-white/10 transition-all duration-300 hover:scale-105 text-uw-gold-light font-medium border border-uw-gold/30 hover:border-uw-gold"
-            >
-              🐦 Twitter
-            </button>
-            <button
-              onClick={() => handleShare('Facebook')}
-              className="px-6 py-3 rounded-xl glass-effect hover:bg-white/10 transition-all duration-300 hover:scale-105 text-uw-gold-light font-medium border border-uw-gold/30 hover:border-uw-gold"
-            >
-              📘 Facebook
-            </button>
-            <button
-              onClick={() => handleShare('LinkedIn')}
-              className="px-6 py-3 rounded-xl glass-effect hover:bg-white/10 transition-all duration-300 hover:scale-105 text-uw-gold-light font-medium border border-uw-gold/30 hover:border-uw-gold"
-            >
-              💼 LinkedIn
-            </button>
-            <button
-              onClick={() => handleShare('Instagram')}
-              className="px-6 py-3 rounded-xl glass-effect hover:bg-white/10 transition-all duration-300 hover:scale-105 text-uw-gold-light font-medium border border-uw-gold/30 hover:border-uw-gold"
-            >
-              📷 Instagram
-            </button>
-          </div>
-
-          {/* Status Message */}
-          {showMessage && (
-            <div className="p-4 rounded-xl bg-uw-purple/20 border border-uw-purple text-center animate-fade-in">
-              <p className="text-uw-gold-light font-medium">
-                ✨ Feature coming soon! Check back after proposal approval.
-              </p>
-            </div>
-          )}
-        </Card>
-
         {/* Additional Context */}
         <div className="mt-12 grid md:grid-cols-2 gap-8">
           <Card>

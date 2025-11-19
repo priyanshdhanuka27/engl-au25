@@ -173,20 +173,6 @@ export default function MentalHealthBenefitsPost() {
               the healing power of music, the strength of community, and our responsibility to the planet.
             </p>
           </section>
-
-          {/* Call to Action */}
-          <Card className="bg-gradient-purple/20 glow-purple text-center space-y-4">
-            <h3 className="text-2xl font-bold text-uw-gold-light">
-              Stay Connected
-            </h3>
-            <p className="text-uw-gold-light/80 max-w-xl mx-auto">
-              Want to be notified when NightPulse Seattle gets approved? Sign up for updates 
-              and be the first to know when tickets go on sale.
-            </p>
-            <GradientButton href="/tickets">
-              Get Notified
-            </GradientButton>
-          </Card>
         </article>
 
         {/* Navigation */}
