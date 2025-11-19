@@ -17,7 +17,7 @@ export default function TicketsPage() {
     },
     {
       number: 2,
-      title: 'Approval & Planning',
+      title: 'Approval and Planning',
       status: 'TBD',
       description: 'Funding confirmation and event logistics',
       active: false,
@@ -33,11 +33,9 @@ export default function TicketsPage() {
 
   return (
     <div className="min-h-screen py-20 relative overflow-hidden">
-      {/* Background Circles */}
       <BackgroundCircles variant="purple" className="opacity-40" />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <div className="text-center space-y-6 mb-16 animate-fade-in">
           <div className="inline-flex items-center space-x-2 glass-effect px-6 py-3 rounded-full border border-uw-gold/30">
             <span className="text-uw-gold">🎫</span>
@@ -53,7 +51,6 @@ export default function TicketsPage() {
           </p>
         </div>
 
-        {/* Timeline */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center gradient-text mb-8">
             Expected Timeline
@@ -61,42 +58,47 @@ export default function TicketsPage() {
 
           <div className="space-y-6">
             {phases.map((phase, index) => (
-              <Card 
+              <Card
                 key={phase.number}
                 className={`animate-slide-up ${phase.active ? 'ring-2 ring-uw-purple glow-purple' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-start space-x-6">
-                  {/* Phase Number */}
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 ${
-                    phase.active 
-                      ? 'bg-gradient-purple glow-purple' 
-                      : 'bg-white/5 border-2 border-white/20'
-                  }`}>
-                    <span className={`text-2xl font-bold ${
-                      phase.active ? 'text-white' : 'text-uw-gold/50'
-                    }`}>
-                      {phase.number}
-                    </span>
-                  </div>
-
-                  {/* Phase Content */}
-                  <div className="flex-1 pt-1">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <h3 className="text-2xl font-bold text-uw-gold-light">
-                        Phase {phase.number}: {phase.title}
-                      </h3>
-                      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                        phase.active 
-                          ? 'bg-uw-purple/30 text-uw-purple border border-uw-purple' 
-                          : 'bg-white/5 text-uw-gold/50 border border-white/10'
-                      }`}>
-                        {phase.status}
+                <div style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="flex items-start space-x-6">
+                    <div
+                      className={`w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 ${
+                        phase.active
+                          ? 'bg-gradient-purple glow-purple'
+                          : 'bg-white/5 border-2 border-white/20'
+                      }`}
+                    >
+                      <span
+                        className={`text-2xl font-bold ${
+                          phase.active ? 'text-white' : 'text-uw-gold/50'
+                        }`}
+                      >
+                        {phase.number}
                       </span>
                     </div>
-                    <p className="text-uw-gold-light/70 text-lg">
-                      {phase.description}
-                    </p>
+
+                    <div className="flex-1 pt-1">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <h3 className="text-2xl font-bold text-uw-gold-light">
+                          Phase {phase.number}: {phase.title}
+                        </h3>
+                        <span
+                          className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                            phase.active
+                              ? 'bg-uw-purple/30 text-uw-purple border border-uw-purple'
+                              : 'bg-white/5 text-uw-gold/50 border border-white/10'
+                          }`}
+                        >
+                          {phase.status}
+                        </span>
+                      </div>
+                      <p className="text-uw-gold-light/70 text-lg">
+                        {phase.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -104,15 +106,12 @@ export default function TicketsPage() {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
         <Card className="text-center space-y-6 bg-gradient-purple/20 glow-purple">
           <div className="space-y-4">
             <div className="text-5xl">📬</div>
-            <h2 className="text-3xl font-bold gradient-text">
-              Get Notified
-            </h2>
+            <h2 className="text-3xl font-bold gradient-text">Get Notified</h2>
             <p className="text-uw-gold-light/80 text-lg max-w-2xl mx-auto">
-              Be the first to know when tickets go on sale. We'll send you an email 
+              Be the first to know when tickets go on sale. We will send you an email
               as soon as the proposal is approved and ticket sales begin.
             </p>
           </div>
@@ -120,14 +119,13 @@ export default function TicketsPage() {
           <NewsletterForm />
 
           <p className="text-uw-gold/60 text-sm">
-            We respect your privacy. No spam, just important updates.
+            We respect your privacy. No spam. Only important updates.
           </p>
         </Card>
 
-        {/* Back Link */}
         <div className="text-center mt-12">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="inline-flex items-center space-x-2 text-uw-gold hover:text-uw-gold-light transition-colors duration-300 group"
           >
             <span className="transform group-hover:-translate-x-2 transition-transform duration-300">←</span>
