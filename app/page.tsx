@@ -16,8 +16,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center space-y-8 animate-fade-in">
             <div className="inline-flex items-center space-x-2 glass-effect px-6 py-3 rounded-full border border-uw-gold/30">
-              <span className="text-uw-gold">🎓</span>
-              <span className="text-uw-gold font-medium">Student Grant Proposal - UW Seattle</span>
+              <span className="text-uw-gold font-medium">Priyansh's Grant Proposal</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold">
@@ -27,7 +26,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-uw-gold-light/90 max-w-4xl mx-auto leading-relaxed">
-              A student-led, all-night music festival proposal focused on community wellness, 
+              A student-led, all-night music festival proposal focused on community wellness,
               high-energy music, and sustainability in Seattle.
             </p>
 
@@ -233,30 +232,6 @@ export default function HomePage() {
             </Card>
 
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <BackgroundCircles variant="gold" />
-        </div>
-
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Card className="bg-gradient-purple animated-gradient text-center space-y-6 glow-purple" hover={false}>
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Support NightPulse Seattle
-            </h2>
-            <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              Help bring this vision to life. Your support will create a transformative experience
-              for the UW community and Seattle at large.
-            </p>
-            <div className="pt-4">
-              <GradientButton href="/tickets" variant="gold">
-                Get Notified
-              </GradientButton>
-            </div>
-          </Card>
         </div>
       </section>
     </div>
