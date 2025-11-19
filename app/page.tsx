@@ -1,4 +1,3 @@
-// app/page.tsx
 'use client';
 
 import React from 'react';
@@ -10,42 +9,37 @@ import BackgroundCircles from '@/components/BackgroundCircles';
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Background Circles */}
+      {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-32 min-h-[80vh] flex items-center">
-        {/* Animated Background Circles */}
         <BackgroundCircles variant="purple" />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center space-y-8 animate-fade-in">
-            {/* Badge */}
             <div className="inline-flex items-center space-x-2 glass-effect px-6 py-3 rounded-full border border-uw-gold/30">
               <span className="text-uw-gold">🎓</span>
               <span className="text-uw-gold font-medium">Student Grant Proposal - UW Seattle</span>
             </div>
 
-            {/* Main Heading */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold">
               <span className="gradient-text text-shadow-lg animated-gradient">
                 NightPulse Seattle
               </span>
             </h1>
 
-            {/* Tagline */}
             <p className="text-xl md:text-2xl text-uw-gold-light/90 max-w-4xl mx-auto leading-relaxed">
               A student-led, all-night music festival proposal focused on community wellness, 
               high-energy music, and sustainability in Seattle.
             </p>
 
-            {/* Blog Notice */}
             <p className="text-uw-gold/70 text-lg italic">
               Blog coming soon
             </p>
 
-            {/* CTA Buttons with new GradientButton */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
               <GradientButton href="/tickets">
                 Get Tickets
               </GradientButton>
+
               <GradientButton 
                 variant="gold"
                 onClick={() => {
@@ -63,9 +57,10 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-b from-transparent via-uw-purple-dark/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
+
             {/* Mental Health */}
-            <Card className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              <div className="text-center space-y-4">
+            <Card className="animate-slide-up">
+              <div style={{ animationDelay: '0.1s' }} className="text-center space-y-4">
                 <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-purple glow-purple flex items-center justify-center">
                   <span className="text-3xl">💜</span>
                 </div>
@@ -78,8 +73,8 @@ export default function HomePage() {
             </Card>
 
             {/* Community */}
-            <Card className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <div className="text-center space-y-4">
+            <Card className="animate-slide-up">
+              <div style={{ animationDelay: '0.2s' }} className="text-center space-y-4">
                 <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-gold glow-gold flex items-center justify-center">
                   <span className="text-3xl">🎵</span>
                 </div>
@@ -92,8 +87,8 @@ export default function HomePage() {
             </Card>
 
             {/* Sustainability */}
-            <Card className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              <div className="text-center space-y-4">
+            <Card className="animate-slide-up">
+              <div style={{ animationDelay: '0.3s' }} className="text-center space-y-4">
                 <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-purple glow-purple flex items-center justify-center">
                   <span className="text-3xl">🌱</span>
                 </div>
@@ -104,6 +99,7 @@ export default function HomePage() {
                 </p>
               </div>
             </Card>
+
           </div>
         </div>
       </section>
@@ -121,6 +117,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
+
             {/* Mental Wellness */}
             <Card>
               <div className="space-y-4">
@@ -131,9 +128,9 @@ export default function HomePage() {
                   <h3 className="text-2xl font-bold text-uw-gold-light">Mental Wellness</h3>
                 </div>
                 <p className="text-uw-gold-light/80 leading-relaxed">
-                  High-BPM music supports mood, stress relief, and emotional connection. 
-                  <span className="text-uw-gold font-semibold"> 79% of people use music during difficult times</span>, 
-                  with EDM ranked as the top genre by healthcare professionals for mental health benefits.
+                  High-BPM music supports mood, stress relief, and emotional connection.
+                  <span className="text-uw-gold font-semibold"> 79 percent of people use music during difficult times</span>,
+                  with EDM ranked as the top genre by healthcare professionals for mental wellness.
                 </p>
               </div>
             </Card>
@@ -148,9 +145,9 @@ export default function HomePage() {
                   <h3 className="text-2xl font-bold text-uw-gold-light">Community Impact</h3>
                 </div>
                 <p className="text-uw-gold-light/80 leading-relaxed">
-                  Festivals <span className="text-uw-gold font-semibold">boost local economy</span>, 
-                  increase artist visibility, and foster shared experience and pride. 
-                  NightPulse Seattle will spotlight emerging local talent alongside established acts.
+                  Festivals <span className="text-uw-gold font-semibold">boost local economy</span>,
+                  increase artist visibility, and foster shared experience and pride.
+                  NightPulse Seattle will spotlight emerging local talent.
                 </p>
               </div>
             </Card>
@@ -165,12 +162,12 @@ export default function HomePage() {
                   <h3 className="text-2xl font-bold text-uw-gold-light">Sustainability</h3>
                 </div>
                 <p className="text-uw-gold-light/80 leading-relaxed">
-                  Green operations with <span className="text-uw-gold font-semibold">waste reduction, renewable energy</span>, 
-                  and Seattle's environmental values at the core. Targeting 60% waste reduction through 
-                  composting, recycling, and reusable materials.
+                  Green operations with <span className="text-uw-gold font-semibold">waste reduction and renewable energy</span>.
+                  Targeting 60 percent waste reduction through composting and reusable materials.
                 </p>
               </div>
             </Card>
+
           </div>
         </div>
       </section>
@@ -178,6 +175,7 @@ export default function HomePage() {
       {/* Program Section */}
       <section className="py-20 bg-gradient-to-b from-transparent via-uw-purple-dark/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
               The Program
@@ -188,6 +186,7 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-8">
+
             {/* Step 01 */}
             <Card className="relative overflow-hidden">
               <div className="absolute top-0 right-0 text-9xl font-bold text-uw-purple/10">01</div>
@@ -197,9 +196,8 @@ export default function HomePage() {
                   <h3 className="text-3xl font-bold text-uw-gold-light">High-Energy Music</h3>
                 </div>
                 <p className="text-uw-gold-light/80 text-lg leading-relaxed pl-20">
-                  EDM, dance, and high-BPM genres proven to boost mood and cognitive engagement. 
-                  Featuring both established headliners and emerging local artists to create 
-                  an unforgettable sonic experience.
+                  EDM, dance, and high-BPM genres proven to boost mood and cognitive engagement.
+                  Featuring established headliners and emerging Seattle talent.
                 </p>
               </div>
             </Card>
@@ -213,9 +211,8 @@ export default function HomePage() {
                   <h3 className="text-3xl font-bold text-uw-gold-light">Wellness Zones</h3>
                 </div>
                 <p className="text-uw-gold-light/80 text-lg leading-relaxed pl-20">
-                  Quiet spaces, hydration stations, mental health resources, and sober zones 
-                  available all night. Professional support staff and peer counselors on-site 
-                  to ensure everyone's wellbeing.
+                  Quiet spaces, hydration stations, mental health resources, and sober zones available all night.
+                  Professional support staff on-site for wellbeing.
                 </p>
               </div>
             </Card>
@@ -229,30 +226,30 @@ export default function HomePage() {
                   <h3 className="text-3xl font-bold text-uw-gold-light">Local Artists</h3>
                 </div>
                 <p className="text-uw-gold-light/80 text-lg leading-relaxed pl-20">
-                  Emerging Seattle talent featured alongside established acts, building community pride 
-                  and providing a platform for local artists to reach new audiences and grow their careers.
+                  Emerging Seattle artists featured alongside established acts to grow visibility
+                  and build community pride.
                 </p>
               </div>
             </Card>
+
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        {/* Background circles for CTA */}
         <div className="absolute inset-0 opacity-30">
           <BackgroundCircles variant="gold" />
         </div>
-        
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Card className="bg-gradient-purple animated-gradient text-center space-y-6 glow-purple" hover={false}>
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Support NightPulse Seattle
             </h2>
             <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              Help bring this vision to life. Your support will create a transformative 
-              experience for the UW community and Seattle at large.
+              Help bring this vision to life. Your support will create a transformative experience
+              for the UW community and Seattle at large.
             </p>
             <div className="pt-4">
               <GradientButton href="/tickets" variant="gold">
