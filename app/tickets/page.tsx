@@ -3,7 +3,6 @@ import React from 'react';
 import Link from 'next/link';
 import Card from '@/components/Card';
 import GradientButton from '@/components/GradientButton';
-import NewsletterForm from '@/components/NewsletterForm';
 import BackgroundCircles from '@/components/BackgroundCircles';
 
 export default function TicketsPage() {
@@ -105,23 +104,6 @@ export default function TicketsPage() {
             ))}
           </div>
         </div>
-
-        <Card className="text-center space-y-6 bg-gradient-purple/20 glow-purple">
-          <div className="space-y-4">
-            <div className="text-5xl">📬</div>
-            <h2 className="text-3xl font-bold gradient-text">Get Notified</h2>
-            <p className="text-uw-gold-light/80 text-lg max-w-2xl mx-auto">
-              Be the first to know when tickets go on sale. We will send you an email
-              as soon as the proposal is approved and ticket sales begin.
-            </p>
-          </div>
-
-          <NewsletterForm />
-
-          <p className="text-uw-gold/60 text-sm">
-            We respect your privacy. No spam. Only important updates.
-          </p>
-        </Card>
 
         <div className="text-center mt-12">
           <Link
