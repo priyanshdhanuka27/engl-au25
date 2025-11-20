@@ -44,10 +44,6 @@ export default function TicketsPage() {
           <h1 className="text-5xl md:text-6xl font-bold gradient-text">
             Tickets Coming Soon
           </h1>
-
-          <p className="text-xl text-uw-gold-light/80 max-w-2xl mx-auto leading-relaxed">
-            This proposal is currently under review. Ticket sales will open after approval.
-          </p>
         </div>
 
         <div className="mb-16">

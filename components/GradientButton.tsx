@@ -7,6 +7,7 @@ import Link from 'next/link';
 interface GradientButtonProps {
   children: React.ReactNode;
   href?: string;
+  external?: boolean;
   onClick?: () => void;
   variant?: 'default' | 'gold';
   className?: string;
@@ -17,12 +18,14 @@ interface GradientButtonProps {
 export default function GradientButton({ 
   children, 
   href, 
+  external = false,
   onClick, 
   variant = 'default', 
   className = '',
   type = 'button',
   disabled = false
 }: GradientButtonProps) {
+
   const baseStyles = `
     relative inline-flex items-center justify-center
     rounded-xl min-w-[132px] px-9 py-4
@@ -39,7 +42,7 @@ export default function GradientButton({
         hover:shadow-[0_0_30px_rgba(75,46,131,0.5)]
         before:absolute before:inset-0 before:bg-gradient-to-r before:from-uw-gold before:to-uw-purple
         before:opacity-0 before:transition-opacity before:duration-300
-        hover:before:opacity-100
+        group-hover:before:opacity-100
       `
     : `
         bg-gradient-to-r from-uw-gold via-uw-gold-light to-uw-gold
@@ -47,7 +50,7 @@ export default function GradientButton({
         text-uw-purple-dark
         before:absolute before:inset-0 before:bg-gradient-to-r before:from-uw-purple before:to-uw-purple-dark
         before:opacity-0 before:transition-opacity before:duration-300
-        hover:before:opacity-100
+        group-hover:before:opacity-100
       `;
 
   const combinedStyles = `${baseStyles} ${variantStyles} ${className}`;
@@ -57,17 +60,32 @@ export default function GradientButton({
       <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
         {children}
       </span>
-      {/* Animated shine effect */}
+
       <span 
         className="absolute inset-0 z-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"
         style={{
           background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)',
-          animation: 'shine 2s infinite',
+          animation: 'shine 2s infinite'
         }}
       />
     </>
   );
 
+  // External links ALWAYS use <a>
+  if (href && external) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={combinedStyles}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  // Internal navigation ALWAYS uses <Link>
   if (href) {
     return (
       <Link href={href} className={combinedStyles}>
@@ -76,10 +94,11 @@ export default function GradientButton({
     );
   }
 
+  // Normal button
   return (
     <button 
-      type={type} 
-      onClick={onClick} 
+      type={type}
+      onClick={onClick}
       disabled={disabled}
       className={combinedStyles}
     >
