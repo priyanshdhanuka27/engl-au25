@@ -12,12 +12,12 @@ export default function ReflectionPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center space-y-6 mb-16 animate-fade-in">
           <div className="inline-flex items-center space-x-2 glass-effect px-6 py-3 rounded-full border border-uw-gold/30">
-            <span className="text-uw-gold"></span>
-            <span className="text-uw-gold font-medium">Priyansh's Reflection</span>
+            <span className="text-uw-gold">✍️</span>
+            <span className="text-uw-gold font-medium">Writer's Reflection</span>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold gradient-text">
-            Creator&apos;s Reflection: NightPulse Seattle Grant Proposal
+            Writer&apos;s Reflection: NightPulse Seattle Grant Proposal
           </h1>
         </div>
 
@@ -26,68 +26,74 @@ export default function ReflectionPage() {
             <div className="space-y-6 text-uw-gold-light/90 leading-relaxed">
               <p>
                 For this grant request project, I created an interactive website proposing NightPulse Seattle, 
-                a student-led, all-night music festival centered on community wellness, high-energy music, and 
-                sustainable practices. This multimodal text combines written content, visual design elements, 
-                and digital interactivity to persuade potential funders which can potentially include university 
-                administration, local cultural foundations, and crowdfunding backers, in order to support a 
-                festival that serves both student mental health and Seattle&apos;s creative community.
+                a student-led, all-night music festival at UW. The assignment required me to persuade potential 
+                funders to support a university project, so I needed to think strategically about who would 
+                actually read this proposal and what would convince them.
               </p>
 
               <p>
-                My choice to use a website as the primary genre stemmed from practical and rhetorical considerations. 
-                Websites allow me to reach diverse stakeholders simultaneously: administrators value data-driven 
-                arguments, students respond to visual appeal, and community funders appreciate demonstrations of 
-                planning and professionalism. The digital format also models the contemporary, tech-savvy approach 
-                that a student-led initiative would take, establishing credibility through execution. By including 
-                hyperlinked citations throughout, I could maintain academic rigor while keeping the reading experience 
-                fluid and accessible.
+                My choice to use a website as the primary genre stemmed from practical considerations. Traditional 
+                grant proposals are dense PDF documents that administrative committees review, but I wanted to reach 
+                multiple stakeholders simultaneously. University administrators need data-driven arguments about 
+                institutional benefits. Students respond to visual appeal and authentic student voice. Local 
+                foundations want to see community impact and professional planning. A website lets me address all 
+                these audiences in one place while demonstrating the kind of tech-savvy, contemporary approach that 
+                a student-led initiative would actually take.
               </p>
 
               <p>
-                The website employs strategic sections that mirror a traditional grant structure while feeling less 
-                institutional. &quot;The Impact&quot; section frontloads evidence-based benefits, addressing the most immediate 
-                question funders ask: why does this matter? I drew on research connecting high-BPM music to mental 
-                wellness, data on festivals&apos; economic impact, and sustainability metrics that align with UW&apos;s 
-                environmental commitments. Each claim links directly to its source, following digital citation 
-                conventions. This transforms dry statistics into a compelling case by focusing on outcomes that 
+                The structure mirrors traditional grant formats but feels less institutional. &quot;The Impact&quot; section 
+                frontloads the evidence-based benefits because that&apos;s the first question any funder asks: why does 
+                this matter? I included research connecting high-BPM music to mental wellness, data on festivals&apos; 
+                economic impact, and sustainability metrics that align with UW&apos;s environmental commitments. Each 
+                claim links directly to its source, maintaining academic rigor while keeping the reading experience 
+                fluid. This approach transforms dry statistics into a compelling case by focusing on outcomes that 
                 matter to different stakeholders: mental health for student services, economic benefits for city 
-                partners, and environmental responsibility for sustainability-minded donors.
+                partners, environmental responsibility for sustainability-minded donors.
               </p>
 
               <p>
                 &quot;The Program&quot; section shifts from why to how, detailing the festival&apos;s structure around high-energy 
                 music, wellness zones, and local artist partnerships. I emphasized Seattle-based artists and student 
-                performers to demonstrate that funding would circulate within the community. The wellness zones 
-                respond to legitimate concerns about all-night events and student safety, showing that the proposal 
-                anticipates challenges rather than ignoring them, addressing the assignment&apos;s requirement to 
-                acknowledge potential obstacles.
+                performers to show that funding would circulate within the community rather than going to outside 
+                contractors. The wellness zones respond to legitimate concerns about all-night events and student 
+                safety, demonstrating that the proposal anticipates challenges instead of ignoring them.
               </p>
 
               <p>
                 My visual and design choices reinforced the festival&apos;s identity while maintaining professionalism. 
-                The color palette draws from UW branding to signal institutional alignment, while the layout and 
-                typography evoke the energy of electronic music culture. This balance was crucial: too corporate 
-                and the proposal loses its student-driven authenticity; too casual and it fails to inspire funder 
+                The color palette draws from UW branding to signal institutional alignment, but the layout and 
+                typography evoke the energy of electronic music culture. This balance was crucial. Too corporate 
+                and the proposal loses its student-driven authenticity. Too casual and it fails to inspire funder 
                 confidence.
               </p>
 
               <p>
-                The research underpinning this proposal extends beyond what&apos;s visible on the surface. I investigated 
-                similar festivals, studied mental health interventions in university settings, examined sustainability 
-                practices at major music events, and explored Seattle&apos;s music scene infrastructure. This background 
-                work allowed me to make informed claims about feasibility, budget considerations, and community impact.
+                The research process proved more extensive than what appears on the surface. I investigated similar 
+                festivals at other universities, studied mental health interventions in university settings, examined 
+                sustainability practices at major music events, and explored Seattle&apos;s music scene infrastructure. 
+                This background work allowed me to make informed claims about feasibility, budget considerations, 
+                and community impact rather than just presenting an idealistic vision.
               </p>
 
               <p>
-                Ultimately, this project taught me that effective grant writing requires strategic thinking about 
-                audience, evidence-based argumentation, and genre choices that enhance rather than obscure your 
-                message. The website format functions simultaneously as a proposal, a proof of concept, and a vision 
-                statement, demonstrating that student initiatives can operate at a professional level while maintaining 
-                the creativity and community focus that make them worthwhile.
+                The biggest challenge was condensing complex arguments into digestible web sections. Traditional 
+                grant proposals can sprawl across twenty pages with detailed appendices, but website visitors won&apos;t 
+                read that much. I had to distill each major point into 2-3 paragraphs while maintaining persuasive 
+                depth. This required multiple revisions to identify which details actually mattered for the argument 
+                and which were just filler.
+              </p>
+
+              <p>
+                Ultimately, the website format functions simultaneously as a proposal, a proof of concept, and a 
+                vision statement. By building an actual professional website rather than just describing one, I 
+                demonstrated that student initiatives can operate at a professional level while maintaining the 
+                creativity and community focus that make them worthwhile. The genre choice itself becomes part of 
+                the argument: this is what student-led cultural programming looks like in 2025.
               </p>
 
               <div className="text-right mt-8 text-uw-gold/70 italic">
-                Word Count: 493
+                Word Count: 560
               </div>
             </div>
           </div>
