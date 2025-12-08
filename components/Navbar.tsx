@@ -11,7 +11,7 @@ export default function Navbar() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/blog', label: 'Blog' },
-    { href: '/infographic', label: 'Infographic' },
+    { href: '/infographic.pdf', label: 'Infographic' },
     { href: '/tickets', label: 'Tickets' },
   ];
 

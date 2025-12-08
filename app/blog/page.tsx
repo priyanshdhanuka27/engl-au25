@@ -8,7 +8,7 @@ export default function BlogPage() {
   const featuredPost = {
     id: 1,
     title: 'Why High-Energy Music Festivals Matter for Student Mental Health',
-    excerpt: 'Research shows that EDM and high-BPM music provide measurable mental health benefits, from mood enhancement to stress relief. Discover why music festivals are more than just entertainment—they\'re a vital wellness resource for students.',
+    excerpt: 'Research shows that EDM and high-BPM music provide measurable mental health benefits, from mood enhancement to stress relief. Discover why music festivals are more than just entertainment, they\'re a vital wellness resource for students.',
     category: 'Mental Health',
     date: 'November 15, 2025',
     readTime: '5 min read',

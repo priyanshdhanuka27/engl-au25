@@ -235,7 +235,7 @@ export default function MentalHealthBenefitsPost() {
               <p className="text-uw-gold-light/80 max-w-2xl mx-auto">
                 Visual breakdown of mental health statistics, community benefits, and sustainability goals.
               </p>
-              <GradientButton href="/infographic">
+              <GradientButton href="/infographic.pdf">
                 View Full Infographic
               </GradientButton>
             </div>
