@@ -2,7 +2,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Card from '@/components/Card';
-import GradientButton from '@/components/GradientButton';
 
 export default function MentalHealthBenefitsPost() {
   // Fixed date for the assignment
@@ -106,7 +105,7 @@ export default function MentalHealthBenefitsPost() {
               </a>
               {' '}
               Beyond individual benefits, the rhythmic synchronization that occurs when groups move to the same
-              beat creates what researchers call “collective effervescence,” a powerful sense of unity and
+              beat creates what researchers call "collective effervescence," a powerful sense of unity and
               belonging that counters the isolation many students feel.
             </p>
           </section>
@@ -152,7 +151,7 @@ export default function MentalHealthBenefitsPost() {
             </p>
 
             <p className="text-uw-gold-light/80 text-lg leading-relaxed">
-              The festival environment also encourages what psychologists call “weak tie” connections, which are brief but
+              The festival environment also encourages what psychologists call "weak tie" connections, which are brief but
               meaningful interactions with strangers that research links to higher overall wellbeing and life
               satisfaction. NightPulse Seattle will amplify these benefits through intentional design. There will be wellness
               zones for students who need breaks, sober spaces for students in recovery, and trained peer support
@@ -235,9 +234,14 @@ export default function MentalHealthBenefitsPost() {
               <p className="text-uw-gold-light/80 max-w-2xl mx-auto">
                 Visual breakdown of mental health statistics, community benefits, and sustainability goals.
               </p>
-              <GradientButton href="/infographic.pdf">
+              <a
+                href="/infographic.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 rounded-xl bg-gradient-gold text-uw-purple-dark font-bold text-lg hover:scale-105 transition-all duration-300 glow-gold"
+              >
                 View Full Infographic
-              </GradientButton>
+              </a>
             </div>
           </Card>
 

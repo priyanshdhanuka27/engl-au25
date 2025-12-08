@@ -9,10 +9,11 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/infographic.pdf', label: 'Infographic' },
-    { href: '/tickets', label: 'Tickets' },
+    { href: '/', label: 'Home', external: false },
+    { href: '/blog', label: 'Blog', external: false },
+    { href: '/infographic.pdf', label: 'Infographic', external: true },
+    { href: '/reflection', label: 'Reflection', external: false },
+    { href: '/tickets', label: 'Tickets', external: false },
   ];
 
   return (
@@ -33,6 +34,22 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
 
+              // Use <a> tag for external links like PDFs
+              if (link.external) {
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium transition-all duration-300 hover:scale-110 text-uw-gold-light hover:text-uw-gold"
+                  >
+                    {link.label}
+                  </a>
+                );
+              }
+
+              // Use Link for internal pages
               return (
                 <Link
                   key={link.href}
@@ -82,6 +99,23 @@ export default function Navbar() {
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
 
+                // Use <a> tag for external links like PDFs
+                if (link.external) {
+                  return (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsOpen(false)}
+                      className="py-2 px-4 rounded-lg transition-colors duration-300 text-uw-gold-light hover:text-uw-gold hover:bg-white/5"
+                    >
+                      {link.label}
+                    </a>
+                  );
+                }
+
+                // Use Link for internal pages
                 return (
                   <Link
                     key={link.href}
